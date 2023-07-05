@@ -247,7 +247,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135322896}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -344,7 +344,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213515100}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -543,7 +543,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603667056}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -656,7 +656,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603728776}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -674,16 +674,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MarkerWaypoint: {fileID: 603728776}
-  wayPoint1: {fileID: 992773116}
-  wayPoint2: {fileID: 1856896782}
-  wayPoint3: {fileID: 1616598600}
-  wayPoint4: {fileID: 603667056}
-  wayPoint5: {fileID: 888943874}
-  wayPoint6: {fileID: 135322896}
-  wayPoint7: {fileID: 213515100}
-  wayPoint8: {fileID: 1314601332}
-  wayPoint9: {fileID: 1465737657}
-  wayPoint10: {fileID: 1480295121}
+  waypoints:
+  - {fileID: 992773116}
+  - {fileID: 1856896782}
+  - {fileID: 1616598600}
+  - {fileID: 603667056}
+  - {fileID: 888943874}
+  - {fileID: 135322896}
+  - {fileID: 213515100}
+  - {fileID: 1314601332}
+  - {fileID: 1465737657}
+  - {fileID: 1480295121}
   wayPointTracker: 0
 --- !u!23 &603728780
 MeshRenderer:
@@ -1137,7 +1138,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888943874}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1263,6 +1264,22 @@ PrefabInstance:
       value: Free Racing Car Blue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: slipAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: brakePower
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: motorPower
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
       propertyPath: _wheelMeshes.FLWheel
       value: 
       objectReference: {fileID: 1587938696}
@@ -1294,6 +1311,54 @@ PrefabInstance:
       propertyPath: _wheelCollider.RRWheel
       value: 
       objectReference: {fileID: 1776449784}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[0].time
+      value: 0.0061079264
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[1].time
+      value: 83.98055
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[0].value
+      value: 70.5562
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[1].value
+      value: 14.88283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[1].inSlope
+      value: 0.15578115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[1].inWeight
+      value: 0.24035282
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[1].outSlope
+      value: 0.15578115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866982532788783616, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+      propertyPath: steeringCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
 --- !u!1 &968103275
@@ -1560,7 +1625,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992773116}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1800,7 +1865,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314601332}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1991,7 +2056,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465737657}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2088,7 +2153,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480295121}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2190,7 +2255,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616598600}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2275,6 +2340,24 @@ WheelCollider:
   m_CorrespondingSourceObject: {fileID: 3380827702811325422, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
   m_PrefabInstance: {fileID: 954659310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1778817878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4591691155392393144, guid: a9cbfe7195f75844aa7ec0619ca7616f, type: 3}
+  m_PrefabInstance: {fileID: 954659310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1778817884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778817878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f79a0c86db14aa4e9056f73b34747b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointManager: {fileID: 603728779}
 --- !u!1 &1814417511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,7 +2482,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856896782}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
