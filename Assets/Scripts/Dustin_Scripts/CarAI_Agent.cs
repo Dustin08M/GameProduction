@@ -5,25 +5,33 @@ using UnityEngine.AI;
 
 public class CarAI_Agent : MonoBehaviour //don't use this as im still fixing on the pathfinding AI - Wind
 {
-    public Transform Tracker;
-    NavMeshAgent carAgent;
-    WayPoint _waypoint;
+    public WayPoint waypointManager;
+    private Dustin_CarController carController;
 
     private void Start()
     {
-        carAgent = GetComponent<NavMeshAgent>();
-        _waypoint = GetComponent<WayPoint>();
+        carController = GetComponent<Dustin_CarController>();
     }
-    private void Update()
-    {
-        carAgent.SetDestination(Tracker.position);
 
-        if (_waypoint.wayPointTracker == 10)
-        {
-            if (carAgent.remainingDistance <= carAgent.stoppingDistance && !carAgent.pathPending)
-            {
-                carAgent.isStopped = true;
-            }
-        }
+    private void FixedUpdate()
+    {
+        // Get the next waypoint position from the WayPoint script
+        Vector3 nextWaypoint = waypointManager.GetNextWaypointPosition();
+
+        // Calculate steering input based on the angle between car's forward direction and the next waypoint
+        Vector3 relativeVector = transform.InverseTransformPoint(nextWaypoint);
+        float steerInput = relativeVector.x / relativeVector.magnitude;
+
+        // Apply steering input to the car controller
+        carController.SteerInput = steerInput;
+
+        // Set gas input to accelerate towards the waypoint
+        carController.gasInput = 1f;
+
+        // Apply the modified car controller inputs
+        carController.ApplyMotor();
+        carController.ApplySteering();
+        carController.ApplyBrake();
+        carController.GetWheelPosition();
     }
 }

@@ -49,20 +49,20 @@ public class Dustin_CarController : MonoBehaviour
         GetWheelPosition();
     }
 
-    void ApplyMotor()
+    public void ApplyMotor()
     {
         _wheelCollider.RRWheel.motorTorque = motorPower * gasInput;
         _wheelCollider.RLWheel.motorTorque = motorPower * gasInput;
     }
 
-    void ApplySteering()
+    public void ApplySteering()
     {
         float steeringAngle = SteerInput * steeringCurve.Evaluate(speed);
         _wheelCollider.FRWheel.steerAngle = steeringAngle;
         _wheelCollider.FLWheel.steerAngle = steeringAngle;
     }
-    
-    void checkInput()
+
+    public void checkInput()
     {
         gasInput = Input.GetAxis("Vertical");
         SteerInput = Input.GetAxis("Horizontal");
@@ -83,7 +83,7 @@ public class Dustin_CarController : MonoBehaviour
         }
     }
 
-    void ApplyBrake()
+    public void ApplyBrake()
     {
         _wheelCollider.FRWheel.brakeTorque = brakeInput * brakePower * 0.7f;
         _wheelCollider.FLWheel.brakeTorque = brakeInput * brakePower * 0.7f;
@@ -92,7 +92,7 @@ public class Dustin_CarController : MonoBehaviour
         _wheelCollider.RLWheel.brakeTorque = brakeInput * brakePower * 0.3f;
     }
 
-    void GetWheelPosition()
+    public void GetWheelPosition()
     {
         UpdateWheels(_wheelCollider.FRWheel, _wheelMeshes.FRWheel);
         UpdateWheels(_wheelCollider.FLWheel, _wheelMeshes.FLWheel);
